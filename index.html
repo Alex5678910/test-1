@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link>
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<label>
+<input type="checkbox" id="one" onchange="fun1()">Всё супер пупер!
+</label>
+
+<input type="radio" name="q1" value="z1"> 0
+<input type="radio" name="q1" value="z2"> 1
+<input type="radio" name="q1" value="z3"> 2
+<button onclick="fun2()">Проверить какой из элементов выбран</button>
+
+<select name="" id="MySelect" onchange="fun3()">
+    <option value="#">Саня</option>
+    <option value="#">Коля</option>
+    <option value="#">Игорь</option>
+    <option value="#">Лёва</option>
+</select>
+
+ <input type="range" min="0" max="100" step="2" oninput="fun4()" id="MyRange">
+ <input type="text" id="one1" style="text-align: center">
+
+<br>
+<input type="range" min="0" max="100" step="1" id="MyRan" oninput='fun5()'>
+<div id="test" style="width: 20px; height: 20px; background: green;"></div>
+<br>
+
+<div class="block1">
+    <p>Верхний левый угол
+        <input type="range" min="0" max="100" step="1" id="rtl" value="0" oninput="fun6()">
+        <input type="text" value="0" id="ttl">
+    </p>
+    <p>Верхний правый угол
+        <input type="range" min="0" max="100" step="1" id="rtr" value="0" oninput="fun6()">
+        <input type="text" value="0" id="ttr">
+    </p>
+    <p>Нижний правый угол
+        <input type="range" min="0" max="100" step="1" id="rbr" value="0" oninput="fun6()">
+        <input type="text" value="0" id="tbr">
+    </p>
+    <p>Нижний левый угол
+        <input type="range" min="0" max="100" step="1" id="rbl" value="0" oninput="fun6()">
+        <input type="text" value="0" id="tbl">
+    </p>
+</div>
+
+<div id="bl" style="height: 100px; width: 200px; background-color: green"></div>
+<br>
+
+
+<div id="nav">
+    <div class="menu-item" style="border: 2px solid green; display: inline-block; position: relative; cursor: pointer">
+        Муню 1
+        <div class="submenu" style="height: 40px; width: 120px; background-color: #0b70cd; cursor: pointer; position: absolute">
+            Подменю
+        </div>
+    </div>
+    <div class="menu-item" style="border: 2px solid green; display: inline-block; position: relative; cursor: pointer">
+        Муню 2
+        <div class="submenu" style="height: 40px; width: 120px; background-color: #0b70cd; cursor: pointer; position: absolute">
+            Подменю
+        </div>
+    </div>
+    <div class="menu-item" style="border: 2px solid green; display: inline-block; position: relative; cursor: pointer">
+        Муню 3
+        <div class="submenu" style="height: 40px; width: 120px; background-color: #0b70cd; cursor: pointer; position: absolute">
+            Подменю
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div id="tabs">
+    <div class="tab whiteborder">Tab 1</div>
+    <div class="tab">Tab 2</div>
+    <div class="tab">Tab 3</div>
+    <div class="tabContent">1</div>
+    <div class="tabContent">2</div>
+    <div class="tabContent">3</div>
+</div>
+<!--=============================================TAB=====================================================-->
+<!--=============================================Модальное окно=====================================================-->
+<br>
+
+<h2>Модальное окно</h2>
+<button id="myBtn">Open Modal</button>
+
+ The Modal 
+<div id="myModal" class="modal">
+
+     Modal content 
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+</div>
+<!--=============================================Модальное окно=====================================================-->
+<!--=====================================================Здравствуйте=====================================================-->
+
+<p id="demo">Кто тут?</p>
+<button type="button" onclick="myFunction()">Поздороваться</button>
+<!--=====================================================Здравствуйте=====================================================-->
+<!--=============================================================Анимация====================================-->
+<br>
+<br>
+<br>
+<br>
+<button onclick="myMove()">Animalka</button>
+<div id="myCont">
+    <div id="myAnim"></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!--=============================================================Анимация====================================-->
+<!--===============================================================Слайдер========================-->
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/img_lights_wide.jpg" style="width:100%">
+        <div class="text">Всем привет</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/img_mountains_wide.jpg" style="width:100%">
+        <div class="text">Отличного дня</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/img_nature_wide.jpg" style="width:100%">
+        <div class="text">Супер пупер</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!--=========================Слайдер========================-->
+<!--=======================фильтер на сайт=====================================-->
+<input type="text" onkeyup="myFunct()" id="myInput" placeholder="Search for names">
+<ul id="myUL">
+    <li><a href="" class="header">A</a></li>
+    <li><a href="">Anton</a></li>
+    <li><a href="">Andrey</a></li>
+    <li><a href="">Andrew</a></li>
+
+    <li><a href="" class="header">B</a></li>
+    <li><a href="">Boris</a></li>
+    <li><a href="">Bogdan</a></li>
+    <li><a href="">Bill</a></li>
+
+    <li><a href="" class="header">C</a></li>
+    <li><a href="">Caterina</a></li>
+    <li><a href="">Creig</a></li>
+    <li><a href="">Cristina</a></li>
+</ul>
+<br>
+<br>
+<!--=======================фильтер на сайт=====================================-->
+<!--==============================калькулятор=========================================-->
+<p>Число 1: <input type="text" id="n1"></p>
+<p>Число 2: <input type="text" id="n2"></p>
+<button onclick="plus()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="multiply()">*</button>
+<button onclick="deline()">/</button>
+
+<p id="out">Ответ:</p>
+<!--==============================калькулятор=========================================-->
+<!--=======================================Модальные изображения=================================-->
+<img src="img/img_mountains_wide.jpg" alt="My workspace" id="myImg" width="300" height="200">
+<div id="myModal-1" class="modal">
+    <span class="close" onclick="document.getElementById('myModal-1').style.display='none'">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+<!--=======================================Модальные изображения=================================-->
+<script>
+/*=======================================Модальные изображения=================================*/
+let Mymodal = document.getElementById('myModal-1');
+let img = document.getElementById('myImg');
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+
+    img.onclick = function (e) {
+    Mymodal.style.display = "block";
+    modalImg.src = e.currentTarget.src;
+    captionText.innerHTML = this.alt;
+};
+
+ let span = document.getElementsByClassName("close")[0];
+ span.onclick = function () {
+    modal.style.display = "none";
+}
+<!--=======================================Модальные изображения=================================-->
+<!--==============================калькулятор=========================================-->
+function plus() {
+let num1, num2, result;
+num1= document.getElementById('n1').value;
+num1= parseInt(num1);
+
+    num2= document.getElementById('n2').value;
+    num2= parseInt(num2);
+
+    result = num1 + num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function minus() {
+    let num1, num2, result;
+    num1= document.getElementById('n1').value;
+    num1= parseInt(num1);
+
+    num2= document.getElementById('n2').value;
+    num2= parseInt(num2);
+
+    result = num1 - num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function multiply() {
+    let num1, num2, result;
+    num1= document.getElementById('n1').value;
+    num1= parseInt(num1);
+
+    num2= document.getElementById('n2').value;
+    num2= parseInt(num2);
+
+    result = num1 * num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function deline() {
+    let num1, num2, result;
+    num1= document.getElementById('n1').value;
+    num1= parseInt(num1);
+
+    num2= document.getElementById('n2').value;
+    num2= parseInt(num2);
+
+    result = num1 / num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+<!--==============================калькулятор=========================================-->
+<!--=======================фильтер на сайт=====================================-->
+function myFunct(){
+    let input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    for(i=0; i<li.length; i++){
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1 && a.innerHTML.toUpperCase().indexOf(filter) < 1){
+            li[i].style.display = "";
+        }else{
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+<!--=======================фильтер на сайт=====================================-->
+<!--=========================Слайдер========================-->
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+<!--=========================Слайдер========================-->
+/*=============================================================Анимация====================================*/
+function myMove() {
+let elem = document.getElementById("myAnim");
+let pos = 0;
+let titi = setInterval(frame, 10);
+function frame() {
+if(pos == 350){
+    clearInterval(titi);
+}else {
+    pos++;
+    elem.style.top = pos + 'px';
+    elem.style.left = pos + 'px';
+     }
+    }
+  }
+/*=============================================================Анимация====================================*/
+<!--=====================================================Здравствуйте=====================================================-->
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Здравствуй Таня";
+    }
+<!--=====================================================Здравствуйте=====================================================-->
+/*=============================================Модальное окно==========================================*/
+
+
+    // Get the modal
+    modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    let btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+/*=============================================Модальное окно==========================================*/
+/*=============================================TAB=====================================================*/
+let tab;
+let tabContent;
+
+  window.onload = function(){
+    tabContent = document.getElementsByClassName('tabContent');
+    tab = document.getElementsByClassName('tab');
+    hideTabsContent(1);
+}
+
+function hideTabsContent(a){
+    for (let i = a; i <tabContent.length; i++){
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add('hide');
+        tab[i].classList.remove('whiteborder');
+    }
+   }
+        document.getElementById('tabs').onclick = function (event) {
+       let target = event.target;
+            if (target.className == 'tab'){
+                for (let i = 0; i < tab.length; i++){
+                    if (target == tab[i]){
+                        showTabsContent(i);
+                        break;
+                    }
+                }
+            }
+        }
+
+function showTabsContent(b){
+    if (tabContent[b].classList.contains('hide')){
+        hideTabsContent(0);
+        tab[b].classList.add('whiteborder');
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+    }
+}
+/*=============================================TAB=====================================================*/
+    for (let char of "саня") {
+        // срабатывает 4 раза: по одному для каждого символа
+        alert( char ); // t, затем e, затем s, затем t
+    }
+
+    document.getElementById('nav').onmouseover = function (event) {
+      let target = event.target;
+      if (target.className == 'menu-item'){
+          let s = target.getElementsByClassName('submenu');
+          closeMenu();
+          s[0].style.display = 'block';
+      }
+    }
+
+    document.onmouseover = function (event) {
+     let target = event.target;
+     if(target.className!='menu-item' && target.className!='submenu'){
+         closeMenu();
+     }
+    }
+
+
+    function closeMenu() {
+        let menu = document.getElementById('nav');
+        let subm = document.getElementsByClassName('submenu');
+        for (let i = 0; i < subm.length; i++){
+            subm[i].style.display = "none";
+        }
+    }
+
+    function fun6(){
+
+        let rtl = document.getElementById('rtl');
+        let rtr = document.getElementById('rtr');
+        let rbr = document.getElementById('rbr');
+        let rbl = document.getElementById('rbl');
+        let ttl = document.getElementById('ttl');
+        let ttr = document.getElementById('ttr');
+        let tbr = document.getElementById('tbr');
+        let tbl = document.getElementById('tbl');
+
+        let blin = document.getElementById('bl');
+
+        ttl.value = rtl.value;
+        ttr.value = rtr.value;
+        tbr.value = rbr.value;
+        tbl.value = rbl.value;
+
+        bl.style.borderRadius = rtl.value + 'px ' + rtr.value + 'px '+ rbr.value + 'px '+ rbl.value + 'px ';
+
+    }
+
+
+    function fun5(){
+        let range = document.getElementById('MyRan');
+        let div = document.getElementById('test');
+        div.style.width = range.value + 'px';
+
+    }
+
+    function fun4(){
+    let range = document.getElementById('MyRange');
+    let one1 = document.getElementById('one1');
+     one1.value = range.value;
+    }
+
+
+     function fun3() {
+
+        let  sel = document.getElementById('MySelect').selectedIndex;
+        let  options = document.getElementById('MySelect').options;
+        alert('Выбран друг ' + options[sel].text);
+    }
+
+    function fun1() {
+        let hyi = document.getElementById('one');
+
+        if (hyi.checked){
+            prompt('выбран', 0);
+        }
+        else{
+            prompt('не выбран', 77);
+        }
+    }
+
+
+    function fun2() {
+        let good;
+        good = document.getElementsByName('q1');
+       for (let i = 0; i < good.length; i++){
+       if(good[i].checked){
+           alert('Выбран ' + i + ' элемент');
+          }
+       }
+    }
+let x = {
+    0: "World",
+    1: "Hello",
+    length: 2
+};
+
+let arr = Array.from(x); // (*)
+alert(arr.pop());
+
+</script>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
